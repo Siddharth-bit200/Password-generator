@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Password Generator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#4f46e5">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🔐 Password Generator</h2>
+
+<div class="outputBox">
+<input type="text" id="password" readonly>
+<button onclick="copyPassword()">Copy</button>
+</div>
+
+<div class="sliderBox">
+<label>Password Length: <span id="lengthValue">12</span></label>
+<input type="range" min="4" max="30" value="12" id="length">
+</div>
+
+<div class="options">
+
+<label>
+<input type="checkbox" id="uppercase" checked>
+Uppercase
+</label>
+
+<label>
+<input type="checkbox" id="lowercase" checked>
+Lowercase
+</label>
+
+<label>
+<input type="checkbox" id="numbers" checked>
+Numbers
+</label>
+
+<label>
+<input type="checkbox" id="symbols">
+Symbols
+</label>
+
+</div>
+
+<button class="generateBtn" onclick="generatePassword()">
+Generate Password
+</button>
+
+<div class="strengthBox">
+
+<p>Password Strength: <span id="strengthText">Medium</span></p>
+
+<div class="strengthBar">
+<div id="strengthFill"></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
